@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jHq-Wg-IbO">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,159 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page1" modalTransitionStyle="partialCurl" id="BYZ-38-t0r" customClass="ViewController" customModule="UIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5A-iE-QUl">
+                                <rect key="frame" x="50" y="159" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1qh-H1-XmR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ePd-Yx-ceO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-js-OT5">
+                                <rect key="frame" x="2" y="229" width="389" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">"Believe you can and you're halfway there." - Theodore Roosevelt,                          "The only way to do great work is to love what you do." - Steve Jobs
+
+"In the midst of chaos, there is also opportunity." - Sun Tzu
+
+"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</string>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YSg-js-OT5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="2Cf-1M-spF"/>
+                            <constraint firstItem="x5A-iE-QUl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8Ri-62-yhy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YSg-js-OT5" secondAttribute="trailing" constant="2" id="DG8-Tc-5Cl"/>
+                            <constraint firstItem="x5A-iE-QUl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="LcS-Vx-MFm"/>
+                            <constraint firstItem="YSg-js-OT5" firstAttribute="top" secondItem="x5A-iE-QUl" secondAttribute="bottom" constant="20" id="e4f-o7-yUY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YSg-js-OT5" secondAttribute="bottom" constant="2" id="nQS-3W-cmw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x5A-iE-QUl" secondAttribute="trailing" constant="50" id="zfe-lz-leR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblDescription" destination="YSg-js-OT5" id="cOL-B4-odE"/>
+                        <outlet property="lblTitle" destination="x5A-iE-QUl" id="eYk-ob-C6f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZWW-bQ-y7g">
+            <objects>
+                <viewController storyboardIdentifier="Page2" modalTransitionStyle="partialCurl" id="xAd-Ey-2Vh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="605-iA-mnp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BM-nb-mKz">
+                                <rect key="frame" x="50" y="159" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TId-O2-jOE"/>
+                                    <constraint firstAttribute="height" constant="50" id="puZ-e4-xJi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6z-4r-3sl">
+                                <rect key="frame" x="2" y="229" width="389" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">"Believe you can and you're halfway there." - Theodore Roosevelt,                          "The only way to do great work is to love what you do." - Steve Jobs
+
+"In the midst of chaos, there is also opportunity." - Sun Tzu
+
+"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</string>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vgT-xG-aj5"/>
+                        <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vgT-xG-aj5" firstAttribute="trailing" secondItem="1BM-nb-mKz" secondAttribute="trailing" constant="50" id="8ca-UD-Gqj"/>
+                            <constraint firstItem="1BM-nb-mKz" firstAttribute="leading" secondItem="vgT-xG-aj5" secondAttribute="leading" constant="50" id="9XI-GQ-Slk"/>
+                            <constraint firstItem="1BM-nb-mKz" firstAttribute="top" secondItem="vgT-xG-aj5" secondAttribute="top" constant="100" id="Kqc-IV-tpH"/>
+                            <constraint firstItem="vgT-xG-aj5" firstAttribute="trailing" secondItem="p6z-4r-3sl" secondAttribute="trailing" constant="2" id="MFZ-D3-ya1"/>
+                            <constraint firstItem="p6z-4r-3sl" firstAttribute="leading" secondItem="vgT-xG-aj5" secondAttribute="leading" constant="2" id="Ybr-ki-GFc"/>
+                            <constraint firstItem="vgT-xG-aj5" firstAttribute="bottom" secondItem="p6z-4r-3sl" secondAttribute="bottom" constant="2" id="Yee-nd-xma"/>
+                            <constraint firstItem="p6z-4r-3sl" firstAttribute="top" secondItem="1BM-nb-mKz" secondAttribute="bottom" constant="20" id="pTc-Ib-i4v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGB-To-eT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="4"/>
+        </scene>
+        <!--Container PageVC-->
+        <scene sceneID="TB2-gF-VN0">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="partialCurl" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jHq-Wg-IbO" customClass="ContainerPageVC" customModule="UIPageViewController" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4X-qd-m7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="-704"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6QK-Wr-6Zd">
+            <objects>
+                <viewController storyboardIdentifier="Page3" modalTransitionStyle="partialCurl" id="Pxg-Pl-Y6Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpm-Dw-IBa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-ZL-2R5">
+                                <rect key="frame" x="50" y="159" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0ZM-6K-R63"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="NCS-bG-PFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUG-o3-Whf">
+                                <rect key="frame" x="2" y="229" width="389" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">"Believe you can and you're halfway there." - Theodore Roosevelt,                          "The only way to do great work is to love what you do." - Steve Jobs
+
+"In the midst of chaos, there is also opportunity." - Sun Tzu
+
+"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</string>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u7k-na-Bwx"/>
+                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="u7k-na-Bwx" firstAttribute="bottom" secondItem="TUG-o3-Whf" secondAttribute="bottom" constant="2" id="2BX-fe-xFy"/>
+                            <constraint firstItem="zWn-ZL-2R5" firstAttribute="top" secondItem="u7k-na-Bwx" secondAttribute="top" constant="100" id="6FW-6W-izu"/>
+                            <constraint firstItem="TUG-o3-Whf" firstAttribute="leading" secondItem="u7k-na-Bwx" secondAttribute="leading" constant="2" id="DKQ-Qw-hav"/>
+                            <constraint firstItem="u7k-na-Bwx" firstAttribute="trailing" secondItem="TUG-o3-Whf" secondAttribute="trailing" constant="2" id="KcK-Yd-olH"/>
+                            <constraint firstItem="u7k-na-Bwx" firstAttribute="trailing" secondItem="zWn-ZL-2R5" secondAttribute="trailing" constant="50" id="eLr-tg-paA"/>
+                            <constraint firstItem="zWn-ZL-2R5" firstAttribute="leading" secondItem="u7k-na-Bwx" secondAttribute="leading" constant="50" id="oBK-oa-5L3"/>
+                            <constraint firstItem="TUG-o3-Whf" firstAttribute="top" secondItem="zWn-ZL-2R5" secondAttribute="bottom" constant="20" id="y1o-CV-bwl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9t-Qi-9xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="4"/>
         </scene>
     </scenes>
 </document>

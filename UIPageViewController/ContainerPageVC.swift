@@ -15,12 +15,30 @@ class ContainerPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPag
         //Chage page control color
 //        view.backgroundColor = .red
         // LTR
-        let vc1 = (self.storyboard?.instantiateViewController(identifier: "Page1"))!
-        let vc2 = self.storyboard?.instantiateViewController(identifier: "Page2")
-        let vc3 = self.storyboard?.instantiateViewController(identifier: "Page3")
+//        let vc1 = (self.storyboard?.instantiateViewController(identifier: "Page1"))!
+//        let vc2 = self.storyboard?.instantiateViewController(identifier: "Page2")
+//        let vc3 = self.storyboard?.instantiateViewController(identifier: "Page3")
+//        arrayContainers.append(vc1)
+//        arrayContainers.append(vc2!)
+//        arrayContainers.append(vc3!)
+       
+        let vc1 = self.storyboard?.instantiateViewController(identifier: "Page1") as! ViewController
+        vc1.pageTitle = "Page1"
+        vc1.pageColor = .blue
+        vc1.pageDescription = "Believe you can and you're halfway there. - Theodore Roosevelt,The only way to do great work is to"
+        let vc2 = self.storyboard?.instantiateViewController(identifier: "Page1") as! ViewController
+        vc2.pageTitle = "Page2"
+        vc2.pageColor = .green
+        vc2.pageDescription = "The only way to do great work is to love what you do. - Steve Jobs"
+        let vc3 = self.storyboard?.instantiateViewController(identifier: "Page1") as! ViewController
+        vc3.pageTitle = "Page3"
+        vc3.pageColor = .magenta
+        vc3.pageDescription = "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill"
+        
         arrayContainers.append(vc1)
-        arrayContainers.append(vc2!)
-        arrayContainers.append(vc3!)
+        arrayContainers.append(vc2)
+        arrayContainers.append(vc3)
+
         delegate = self
         dataSource = self
         if let firstVC = arrayContainers.first {

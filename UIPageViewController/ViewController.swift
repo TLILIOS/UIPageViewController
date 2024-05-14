@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     var pageTitle: String?
     var pageDescription: String?
-    
+    var pageColor: UIColor?
     override func viewDidLoad() {
         super.viewDidLoad()
         if let title = pageTitle {
@@ -22,7 +22,11 @@ class ViewController: UIViewController {
         if let description = pageDescription {
             lblDescription.text = description
         }
+        if let color = pageColor {
+            view.backgroundColor = color
+        }
     }
+    
 
 
 }
